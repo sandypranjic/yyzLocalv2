@@ -1,0 +1,66 @@
+body {
+    @include mainText;
+    color: $mainText;
+    background-color: $background;
+    font-size: 62.5%;
+}
+
+.wrapper {
+    width: 90vw;
+    margin: 0 auto;
+}
+
+body, header, div, section, h1, h2, h3, img, p {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: $mainText;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.2;
+    margin: 10px 0;
+}
+
+li {
+    list-style: none;
+}
+
+.page-enter {
+    opacity: 0;
+}
+
+.page-enter-done {
+    opacity: 1;
+    transition: opacity 1s;
+    transition-delay: 0.5s;
+}
+
+.page-exit {
+    opacity: 1;
+}
+
+.page-exit-active {
+    opacity: 0;
+    transition: opacity 800ms;
+}
+
+.page-appear {
+    opacity: 0.01;
+}
+
+.page-appear-active {
+    opacity: 1;
+    transition: opacity .5s ease-in;
+}
+
+.test {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}

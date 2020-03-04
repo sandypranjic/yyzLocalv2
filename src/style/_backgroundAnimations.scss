@@ -1,0 +1,58 @@
+.graphicsContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+    .backgroundLayer, .middleGroundLayer, .foregroundLayer {
+        width: 100%;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        img {
+            object-fit: cover;
+            object-position: bottom;
+            width: 100%;
+        }
+    }
+    .backgroundLayer {
+        z-index: 1;
+    }
+    .middleGroundLayer {
+        z-index: 10;
+    }
+    .foregroundLayer {
+        z-index: 15;
+    }
+    .sunAndClouds {
+        height: 100vh;
+        position: relative;
+        bottom: 0;
+        .sunImage {
+            width: 35px;
+            height: 35px;
+            position: absolute;
+            bottom: 50%;
+            right: 300px;
+        }
+        .cloud1 {
+            width: 99px;
+            height: 54px;
+            bottom: 50%;
+        }
+        .cloud2 {
+            width: 59px;
+            height: 42px;
+            bottom: calc(50% - 30px);
+        }
+        .cloudImage {
+            position: absolute;
+            left: 100vw;
+        }
+    }
+}

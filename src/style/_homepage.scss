@@ -1,0 +1,13 @@
+.homepageContainer {
+    animation: indexFadeIn 2s;
+    z-index: -1;
+}
+
+@keyframes indexFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
