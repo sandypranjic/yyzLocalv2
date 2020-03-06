@@ -2,9 +2,6 @@ import React, { useState } from 'react';
 import { NavLink } from "react-router-dom";
 
 function Header() {
-    const [greeting, setGreeting] = useState("hello");
-
-    console.log(greeting);
 
     return(
         <React.Fragment>

@@ -7,6 +7,9 @@ main {
             color: $logoAccent;
         }
     }
+    h3 {
+        font-size: 2rem;
+    }
     .search {
         width: 100%;
         height: 100%;
@@ -17,9 +20,30 @@ main {
         z-index: 200;
         .textContainer {
             width: 50%;
+            background-color: $translucent;
+            border: 5px solid $translucent;
+            border-radius: 30px;
+            padding: 20px;
         }
         .greetingContainer, .searchInfoText {
             width: 100%;
+        }
+    }
+    .searchHeading, .dropDownHeading {
+        position: relative;
+        z-index: 10;
+        display: inline-block;
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 20px;
+            width: 100%;
+            background-color: $accent2;
+            z-index: -5;
         }
     }
     .searchGraphicsContainer {
@@ -29,6 +53,7 @@ main {
         position: absolute;
         top: 0;
         left: 0;
+        z-index: -1;
     }
     .searchBackground, .searchMiddleGround, .searchForeground {
         width: 100%;
@@ -44,5 +69,70 @@ main {
             object-position: bottom;
             width: 100%;
         }
+    }
+    .searchAndDropDown {
+        width: 50%;
+    }
+    .formContainer {
+        width: 100%;
+        padding: 20px 0;
+    }
+    .searchForANeighbourhood {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        input {
+            @include mainText;
+            width: 100%;
+            font-size: 1.3rem;
+            padding: 20px;
+            background-color: $neutral;
+            border: 0;
+            border-radius: 30px;
+        }
+        button {
+            position: absolute;
+            right: 10px;
+            height: 100%;
+            width: 50px;
+            font-size: 2rem;
+            background-color: transparent;
+            color: $mainText;
+            border: 0;
+            transition: all 0.3s ease;
+            &:hover {
+                color: $logoAccent;
+            }
+        }
+    }
+    .dropDownHeading {
+        &::after {
+            background-color: $accent;
+        }
+    }
+    .neighbourhoodOptions {
+        @include mainText;
+        color: $mainText;
+        font-size: 1.3rem;
+        width: 100%;
+        background-color: $neutral;
+        border-radius: 30px;
+        border: 0;
+        height: 64px;
+        padding: 0 20px;
+        background-image: url("../assets/dropDownArrow.svg");
+        background-position: 97% 50%;
+        background-repeat: no-repeat;
+        background-size: 20px;
+    }
+    select {
+        /* for Firefox */
+        -moz-appearance: none;
+        /* for Chrome */
+        -webkit-appearance: none;
+    }
+        /* for IE10 */
+    select::-ms-expand {
+        display: none;
     }
 }

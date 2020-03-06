@@ -13,17 +13,17 @@ const SearchGraphics = () => {
 
     useEffect( () => {
         gsap.from(background, 1, {
-            delay: 1,
+            delay: 2,
             ease: "Linear.easeNone",
             y: "100vh",
         })
         gsap.from(middleground, 1, {
-            delay: 2,
+            delay: 3,
             ease: "none",
             y: "110vh",
         },)
         gsap.from(foreground, 2, {
-            delay: 2,
+            delay: 4,
             ease: "none",
             y: "110vh",
         })

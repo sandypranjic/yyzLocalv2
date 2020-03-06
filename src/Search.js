@@ -2,6 +2,8 @@ import React from "react";
 
 // Components
 import SearchGraphics from "./SearchGraphics";
+import SearchForm from "./SearchForm.js";
+import SearchDropDown from "./SearchDropDown";
 
 const Search = () => {
     return (
@@ -18,6 +20,17 @@ const Search = () => {
                             <p>Either search for a neighbourhood, or select an option from the drop-down.</p>
                         </div>
                     </div>
+
+                    <section className="searchAndDropDown">
+                        <div className="formContainer">
+                            <h3 className="searchHeading">Search For a Neighbourhood</h3>
+                            <SearchForm />
+                        </div>
+                        <div className="formContainer">
+                            <h3 className="dropDownHeading">Choose a Neighbourhood</h3>
+                            <SearchDropDown />
+                        </div>
+                    </section>
                 </section>
             </main>
         </React.Fragment>

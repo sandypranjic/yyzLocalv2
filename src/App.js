@@ -1,8 +1,9 @@
-import React, { Component } from 'react';
+import React, { Component, useState, createContext, useContext, useReducer } from 'react';
 import './App.scss';
 import { Route } from "react-router-dom";
 import { CSSTransition } from "react-transition-group";
 import { gsap } from "gsap";
+import { useStore } from "./store";
 
 // Components
 import Header from "./Header.js";
@@ -14,30 +15,36 @@ const routes = [
   {path: "/search", name: "search", Component: Search},
 ];
 
+
 function App() {
-  return (
-    <React.Fragment>
-      <Header />
-        {routes.map(({ path, name, Component }) => (
-          <Route key={name} exact path={path}>
+  
+  const {state, dispatch} = useStore();
+  console.log(state);
 
-            {({match}) => (
-              <CSSTransition
-              in={match != null}
-              timeout={1200}
-              classNames="page"
-              unmountOnExit>
-                <div className="page">
-                  <Component />
-                </div>
-              </CSSTransition>
-            )}
-          </Route>
-        ))}
-    
+    return (
+      <React.Fragment>
+          
+        <Header />
+          
+          {routes.map(({ path, name, Component }) => (
+            <Route key={name} exact path={path}>
+  
+              {({match}) => (
+                <CSSTransition
+                in={match != null}
+                timeout={1200}
+                classNames="page"
+                unmountOnExit>
+                  <div className="page">
+                    <Component />
+                  </div>
+                </CSSTransition>
+              )}
+            </Route>
+          ))}
+      </React.Fragment>
+    );
 
-    </React.Fragment>
-  );
 }
 
 export default App;

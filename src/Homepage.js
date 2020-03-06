@@ -1,4 +1,5 @@
 import React from 'react';
+import { useStore } from "./store";
 
 // Components
 import GetStarted from "./GetStarted.js";

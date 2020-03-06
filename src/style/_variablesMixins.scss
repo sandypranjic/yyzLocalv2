@@ -8,11 +8,30 @@ $logoAccent: #b28071;
 $accent: #e1baa3;
 $accent2: #c4c9c5;
 $neutral: #d7cfc4;
+$translucent: rgba(255, 255, 255, 0.5);
 
 // Font Faces
 
-@mixin mainText {
-    font-family: poynter-oldstyle-text, serif;
+// @mixin mainText {
+//     font-family: poynter-oldstyle-text, serif;
+//     font-style: normal;
+//     font-weight: 700;
+// }
+
+@mixin serif {
+    font-family: kazimir, sans-serif;
+    font-weight: 500;
     font-style: normal;
-    font-weight: 700;
+}
+
+@mixin mainText {
+    font-family: brevia, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+@mixin mainTextBold {
+    font-family: brevia, sans-serif;
+    font-style: normal;
+    font-weight: 600;
 }
